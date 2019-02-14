@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - iitb_dj
+  enforced:
+    theme:
+      - iitb_dj
+id: iitb_dj_primary_admin_actions
+theme: iitb_dj
+region: content_top
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

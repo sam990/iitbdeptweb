@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Display Suite 1 column template.
+ *
+ * Available variables:
+ * - ds_content_wrapper: wrapper around content
+ * - attributes: content region attributes
+ * - ds_content: content region
+ */
+#}
+<{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix') }}>
+
+  {{ title_suffix.contextual_links }}
+
+
+	<header class="sabbi-page-header page-header-lg event-page-header" {% if event_header_style %} style = "{{ event_header_style }}" {% endif %} >
+        <div class="page-header-content conternt-center">
+            <div class="header-title-block">
+                <h1 class="page-title">{{ title }}</h1>
+            </div>
+        </div>
+  </header>
+
+  <section class="sabbi-section stage_events_post stage_events_post-single">
+    	<div class="container">
+        	<div class="events_post_single-sagment">
+            	<div class="row">
+                	<div class="col-sm-8 col-sm-offset-2">
+                    	<article class="sabbi-events-item">
+                        <!-- <a href="http://rushmore.wpcolorlab.com/rushmore_event/365/" class="sabbi-events-link">
+                            <figure>
+                                <img src="./11th batch MSc Students Reunion – Academix – Multipurpose Researcher and Professor WordPress Theme_files/events_single.jpg" class="sabbi-events-img img-responsive" alt="">                                <figcaption>
+                                    <h2 class="sabbi-events-title font-md__x">11th batch MSc Students Reunion</h2>
+                                </figcaption>
+                            </figure>
+                        </a> -->
+                        <div class="events-item-meta">
+                            {{ ds_content.field_event_venue }}
+                           {{ ds_content.field_start_date_and_time }}
+                           {{ ds_content.field_end_date_and_time }}
+                           {{ ds_content.field_title_of_seminar_conferenc }}
+                            {{ ds_content.field_name_of_speak_and_affiliat }}
+                            {{ ds_content.field_event_types }}
+                            {{ ds_content.body }}
+                        </div>
+                      </article><!-- /.sabbi-events-item -->
+                </div>
+            </div>
+        </div><!-- /.events_post_single-sagment -->
+    </div>
+</section>
+</{{ ds_content_wrapper }}>

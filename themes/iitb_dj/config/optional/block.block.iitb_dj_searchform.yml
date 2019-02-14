@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - iitb_dj
+  enforced:
+    theme:
+      - iitb_dj
+id: iitb_dj_searchform
+theme: iitb_dj
+region: header_search
+weight: -11
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+visibility: {  }

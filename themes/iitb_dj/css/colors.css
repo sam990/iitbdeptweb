@@ -1,0 +1,155 @@
+
+
+
+.section-footer, .top-nav, .top-head-def{
+    background-color: #444444;
+}
+
+.section-footer *, .top-nav *,.top-head-def *, .section-footer a:hover, .top-nav a:hover, .top-head-def a:hover{
+	color: #ffffff;
+}
+
+
+/* navbar normal background color and text color */
+.navbar-default .navbar-brand {
+    color: #444444;
+}
+
+
+/* navbar shrink background color and text color */
+.navbar-is-shrink .navbar-brand, .navbar-is-shrink .navbar-text, .navbar-is-shrink a, .navbar-is-shrink a:hover {
+  color: #ffffff!important;
+}
+
+.navbar-is-shrink{
+  background-color: #444444;
+     -webkit-transition: 0.5s;
+   -moz-transition: 0.5s;
+   -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+
+.profile-nav > li.active > a, .profile-nav > li.active > a:hover, .profile-nav > li.active > a:focus{
+  color: #ffffff;
+   -webkit-transition: all 0.5s;
+   -moz-transition: all 0.5s;
+   -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+ .profile-nav > li.active > a, .profile-nav  > li.active > a:hover, .profile-nav  > li.active > a:focus {
+	background-color: #444444;
+  border-color: #444444;
+}
+
+
+
+body {
+ color: #343536;
+} 
+
+a {
+  color: #337ab7;
+}
+
+a:focus{
+  color: #337ab7;
+}
+
+a:hover, .news-card .lst_news_item a:hover{
+   color: #337ab7;
+}
+
+a.views-more-link {
+  color: #337ab7!important;
+}
+
+.language-switcher-language-url ul.lang-links li a{
+  color: #337ab7;
+}
+.language-switcher-language-url ul.lang-links li a:hover{
+  color: #337ab7;
+}
+
+.language-switcher-language-url ul.lang-links li.is-active a{
+  color: #ffffff; 
+}
+.language-switcher-language-url ul.lang-links li.is-active a:hover{
+  color: #ffffff;
+}
+
+h2.page-header {
+	color: #343536;
+}
+
+.pagination > li > a, .pagination > li > span{
+  color: #337ab7;
+}
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus{
+  color: #337ab7;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+
+
+
+
+.menu-base-theme li a:hover,
+.menu-base-theme li a:focus,
+.menu-base-theme li a:active,
+.menu-base-theme li a.highlighted{
+   border-bottom-color: #337ab7;
+}
+
+.btn-primary {
+    background-color: #337ab7!important;
+    border-color: #337ab7!important;
+}
+
+.btn-primary a, .btn-primary a:hover, .btn-primary a:focus, .btn-primary a:active{
+  color: #ffffff;
+}
+
+.file>span{
+  color: #337ab7;
+}
+
+.file-icon .text-primary{
+   color: #337ab7;
+}
+
+
+
+@media (max-width: 767px){
+
+  .menu-base-theme {
+      background: #ffffff;
+  }
+
+  .menu-base-theme li a{
+    color: #337ab7;
+  }
+
+  .menu-base-theme li a:active,
+  .menu-base-theme li a.highlighted,
+    .menu-base-theme li a:hover,
+  .menu-base-theme li a:focus{
+    background-color: #337ab7;
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .region-navigation-collapsible li.active a, .region-navigation-collapsible li a.is-active {
+    border-bottom-color: #337ab7;
+  }
+   .region-navigation-collapsible li a.is-active.has-submenu:hover{
+   border-bottom-color: #337ab7;
+ }
+}

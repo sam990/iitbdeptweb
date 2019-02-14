@@ -1,0 +1,9 @@
+{
+    "name": "IITBombayWeb/iitb_dj",
+    "description": "IITB Diamond jubilee theme",
+    "type": "drupal-theme",
+    "license": "GPL-2.0-or-later",
+    "require": { 
+    }
+}
+
