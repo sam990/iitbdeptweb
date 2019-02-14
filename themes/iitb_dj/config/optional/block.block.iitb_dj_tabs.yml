@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - iitb_dj
+  enforced:
+    theme:
+      - iitb_dj
+id: iitb_dj_tabs
+theme: iitb_dj
+region: content_top
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

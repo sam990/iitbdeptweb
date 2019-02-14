@@ -1,0 +1,326 @@
+<?php
+/**
+ * @file
+ * Contains theme override functions and preprocess functions
+ */
+
+use Drupal\Core\Template\RenderWrapper;
+use Drupal\Core\Template\Attribute;
+use Drupal\Component\Utility\Html;
+use Drupal\Component\Utility\Xss;
+use Drupal\search\Form\SearchBlockForm;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\system\Form\ThemeSettingsForm;
+use Drupal\file\Entity\File;
+use Drupal\Core\Url;
+use Drupal\file\Plugin\Core\Entity\FileInterface;
+use Drupal\Core\Config\ConfigFactoryInterface;
+  
+/**
+ * Implements hook_preprocess_page() for block templates.
+ */
+
+global $theme_name, $path_to_iitb_dj;
+$theme_name = \Drupal::theme()->getActiveTheme()->getName();
+$path_to_iitb_dj = drupal_get_path('theme', 'iitb_dj');
+
+
+
+
+function iitb_dj_preprocess_ds_1col(&$variables){
+  global $theme_name,$base_path;
+  
+  $variables['faculty_header_style'] = '';
+  $faculty_header_bg_file =  $base_path.'/' . theme_get_setting('faculty_header_bg_file', $theme_name);
+  
+  if ($faculty_header_bg_file) {
+    $variables['faculty_header_style'] .= 'background: url(' . $faculty_header_bg_file . '); background-size: cover;';
+  }
+
+
+  $variables['event_header_style'] = '';
+  $event_header_bg_file =  $base_path.'/' . theme_get_setting('event_header_bg_file', $theme_name);
+  
+  if ($event_header_bg_file) {
+    $variables['event_header_style'] .= 'background: url(' . $event_header_bg_file . '); background-size: cover;';
+  }
+
+
+  $variables['news_header_style'] = '';
+  $news_header_bg_file =  $base_path.'/' . theme_get_setting('news_header_bg_file', $theme_name);
+  
+  if ($news_header_bg_file) {
+    $variables['news_header_style'] .= 'background: url(' . $news_header_bg_file . '); background-size: cover;';
+  }
+ 
+ 
+}
+
+
+function iitb_dj_preprocess_page(&$variables) {
+  global $base_path, $theme_name;
+  $variables['logo2'] = $base_path.'/' . drupal_get_path('theme','iitb_dj') . '/logo2.png';
+  // Social media global variable.
+  $variables['show_social_icon'] = theme_get_setting('show_social_icon');
+  $variables['facebook_url'] = theme_get_setting('facebook_url');
+  $variables['google_plus_url'] = theme_get_setting('google_plus_url');
+  $variables['twitter_url'] = theme_get_setting('twitter_url');
+  $variables['linkedin_url'] = theme_get_setting('linkedin_url');
+
+  $variables['show_heading_branding'] = theme_get_setting('show_heading_branding');
+  $variables['heading_branding_text'] = theme_get_setting('heading_branding_text');
+  $variables['heading_branding_url'] = theme_get_setting('heading_branding_url');
+  $variables['heading_branding_title'] = theme_get_setting('heading_branding_title');
+
+  //To get the current URL
+  $current_url  = \Drupal::request()->getRequestUri();
+  $current_path = explode("/", $current_url);
+  $variables['current_path'] = $current_path[2];
+
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
+
+
+}
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+
+
+function iitb_dj_preprocess_block(&$variables) {
+  global $base_path;
+  switch ($variables['base_plugin_id']) {
+    case 'system_branding_block':
+      $variables['site_logo'] = '';
+      if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
+        $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
+      }
+      $variables['logo2'] = $base_path.'/' . drupal_get_path('theme','iitb_dj') . '/logo2.png';
+      break;
+
+  }
+}
+
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function iitb_dj_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+      //Social Icon Link
+      $form['iitb_dj_settings']['social_icon'] = array(
+        '#type' => 'details',
+        '#title' => t('Social Media Link'),
+        '#collapsible' => TRUE,
+        '#collapsed' => FALSE,
+      );
+      $form['iitb_dj_settings']['social_icon']['show_social_icon'] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Show Social Icons'),
+        '#default_value' => theme_get_setting('show_social_icon'),
+        '#description'   => t("Show/Hide Social media links"),
+      );
+      $form['iitb_dj_settings']['social_icon']['facebook_url'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Facebook URL'),
+        '#default_value' => theme_get_setting('facebook_url'),
+      );
+      $form['iitb_dj_settings']['social_icon']['google_plus_url'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Google plus URL'),
+        '#default_value' => theme_get_setting('google_plus_url'),
+      );
+      $form['iitb_dj_settings']['social_icon']['twitter_url'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Twitter URL'),
+        '#default_value' => theme_get_setting('twitter_url'),
+      );
+      $form['iitb_dj_settings']['social_icon']['linkedin_url'] = array(
+        '#type' => 'textfield',
+        '#title' => t('LinkedIn URL'),
+        '#default_value' => theme_get_setting('linkedin_url'),
+      );
+
+      $form['iitb_dj_settings']['heading_branding'] = array(
+        '#type' => 'details',
+        '#title' => t('Heading Branding'),
+        '#collapsible' => TRUE,
+        '#collapsed' => FALSE,
+      );
+      $form['iitb_dj_settings']['heading_branding']['show_heading_branding'] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Show Heading Branding'),
+        '#default_value' => theme_get_setting('show_heading_branding'),
+        '#description'   => t("Show/Hide Top Nav Branding"),
+      );
+      $form['iitb_dj_settings']['heading_branding']['heading_branding_text'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Heading Branding Text'),
+        '#default_value' => theme_get_setting('heading_branding_text'),
+      );
+      $form['iitb_dj_settings']['heading_branding']['heading_branding_url'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Heading Branding URL'),
+        '#default_value' => theme_get_setting('heading_branding_url'),
+      );
+      $form['iitb_dj_settings']['heading_branding']['heading_branding_title'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Heading Branding Title'),
+        '#description'   => t("Enter the text which will shown on hovering this url"),        
+        '#default_value' => theme_get_setting('heading_branding_title'),
+      );
+      $form['iitb_dj_info'] = array(
+        '#markup' => '<div class="messages messages--warning">Clear cache after making any changes in theme settings. <a href="../../config/development/performance">Click here to clear cache</a></div>'
+      );
+
+
+
+    $form['iitb_dj_settings']['faculty_header_bg']  = array(
+        '#type' => 'details',
+        '#title' => t('Faculty page header Background image'),
+        '#description' => t('<p>please upload or enter the url of header background image</p>'),
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
+    );
+
+
+    $form['iitb_dj_settings']['faculty_header_bg']['faculty_header_bg_file'] = array(
+        '#type' => 'textfield',
+        '#title' => t('URL of the header background image'),
+        '#default_value' => theme_get_setting('faculty_header_bg_file'),
+        '#description' => t('Enter a URL of the form (/sites/default/files/your-background.jpg). If the background image is bigger than the header area, it is clipped. If it\'s smaller than the header area, it is tiled to fill the header area. To remove the background image, blank this field and save the settings.'),
+        '#size' => 40,
+        '#maxlength' => 120,
+    );
+
+    $form['iitb_dj_settings']['faculty_header_bg']['faculty_header_bg'] = array(
+      '#type' => 'file',
+      '#title' => t('Upload faculty page header background image'),
+      '#size' => 40,
+      '#attributes' => array('enctype' => 'multipart/form-data'),
+      '#description' => t('If you don\'t have direct access to the server, use this field to upload your header background image. Uploads limited to .png .gif .jpg .jpeg .apng .svg extensions'),
+      '#element_validate' => array('faculty_header_bg_validate'),
+    );
+
+
+
+   $form['iitb_dj_settings']['event_header_bg']  = array(
+        '#type' => 'details',
+        '#title' => t('Event page header Background image'),
+        '#description' => t('<p>please upload or enter the url of Event page header background image</p>'),
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
+    );
+
+
+    $form['iitb_dj_settings']['event_header_bg']['event_header_bg_file'] = array(
+        '#type' => 'textfield',
+        '#title' => t('URL of the Event header background image file'),
+        '#default_value' => theme_get_setting('event_header_bg_file'),
+        '#description' => t('Enter a URL of the form (/sites/default/files/your-background.jpg). If the background image is bigger than the header area, it is clipped. If it\'s smaller than the header area, it is tiled to fill the header area. To remove the background image, blank this field and save the settings.'),
+        '#size' => 40,
+        '#maxlength' => 120,
+    );
+
+    $form['iitb_dj_settings']['event_header_bg']['event_header_bg'] = array(
+      '#type' => 'file',
+      '#title' => t('Upload event page header background image'),
+      '#size' => 40,
+      '#attributes' => array('enctype' => 'multipart/form-data'),
+      '#description' => t('If you don\'t have direct access to the server, use this field to upload your header background image. Uploads limited to .png .gif .jpg .jpeg .apng .svg extensions'),
+      '#element_validate' => array('event_header_bg_validate'),
+    );
+  
+
+      $form['iitb_dj_settings']['news_header_bg']  = array(
+        '#type' => 'details',
+        '#title' => t('news page header Background image'),
+        '#description' => t('<p>please upload or enter the url of header background image</p>'),
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
+    );
+
+
+    $form['iitb_dj_settings']['news_header_bg']['news_header_bg_file'] = array(
+        '#type' => 'textfield',
+        '#title' => t('URL of the header background image'),
+        '#default_value' => theme_get_setting('news_header_bg_file'),
+        '#description' => t('Enter a URL of the form (/sites/default/files/your-background.jpg). If the background image is bigger than the header area, it is clipped. If it\'s smaller than the header area, it is tiled to fill the header area. To remove the background image, blank this field and save the settings.'),
+        '#size' => 40,
+        '#maxlength' => 120,
+    );
+
+    $form['_settings']['news_header_bg']['news_header_bg'] = array(
+      '#type' => 'file',
+      '#title' => t('Upload news page header background image'),
+      '#size' => 40,
+      '#attributes' => array('enctype' => 'multipart/form-data'),
+      '#description' => t('If you don\'t have direct access to the server, use this field to upload your header background image. Uploads limited to .png .gif .jpg .jpeg .apng .svg extensions'),
+      '#element_validate' => array('news_header_bg_validate'),
+    );
+  }
+
+function faculty_header_bg_validate($element, FormStateInterface $form_state) {
+  global $base_url;
+
+  $validators = array('file_validate_extensions' => array('png gif jpg jpeg apng svg'));
+  $file = file_save_upload('faculty_header_bg', $validators, "public://", NULL, FILE_EXISTS_REPLACE);
+
+  if (!empty($file)) {
+    // change file's status from temporary to permanent and update file database
+    if ((is_object($file[0]) == 1)) {
+      $file[0]->status = FILE_STATUS_PERMANENT;
+      $file[0]->save();
+      $uri = $file[0]->getFileUri();
+      $file_url = file_create_url($uri);
+      $file_url = str_ireplace($base_url, '', $file_url);
+      $form_state->setValue('faculty_header_bg_file', $file_url);
+    }
+ }
+}
+
+
+function event_header_bg_validate($element, FormStateInterface $form_state) {
+  global $base_url;
+
+  $validators = array('file_validate_extensions' => array('png gif jpg jpeg apng svg'));
+  $file = file_save_upload('event_header_bg', $validators, "public://", NULL, FILE_EXISTS_REPLACE);
+
+  if (!empty($file)) {
+    // change file's status from temporary to permanent and update file database
+    if ((is_object($file[0]) == 1)) {
+      $file[0]->status = FILE_STATUS_PERMANENT;
+      $file[0]->save();
+      $uri = $file[0]->getFileUri();
+      $file_url = file_create_url($uri);
+      $file_url = str_ireplace($base_url, '', $file_url);
+      $form_state->setValue('event_header_bg_file', $file_url);
+    }
+ }
+}
+
+function news_header_bg_validate($element, FormStateInterface $form_state) {
+  global $base_url;
+
+  $validators = array('file_validate_extensions' => array('png gif jpg jpeg apng svg'));
+  $file = file_save_upload('news_header_bg', $validators, "public://", NULL, FILE_EXISTS_REPLACE);
+
+  if (!empty($file)) {
+    // change file's status from temporary to permanent and update file database
+    if ((is_object($file[0]) == 1)) {
+      $file[0]->status = FILE_STATUS_PERMANENT;
+      $file[0]->save();
+      $uri = $file[0]->getFileUri();
+      $file_url = file_create_url($uri);
+      $file_url = str_ireplace($base_url, '', $file_url);
+      $form_state->setValue('news_header_bg_file', $file_url);
+    }
+ }
+}

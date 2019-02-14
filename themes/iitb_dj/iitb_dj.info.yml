@@ -1,0 +1,42 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'IIT Bombay DJ Theme'
+description: 'Custom colorable theme using bootstrap as base theme'
+package: 'Bootstrap'
+
+regions:
+  top_head_search: 'Top Head Search'
+  header: 'Header'
+  lang_switcher: 'language Switcher'
+  header_search: 'Header Search box'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  slider: 'slider'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  top_head: 'Top Head region'
+  top1: 'Top1'
+  top2: 'Top2'
+  top3: 'Top3'
+  top4: 'Top4'
+  content_top: 'Content Top'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar Second'
+  footer1: 'Footer1'
+  footer2: 'Footer2'
+  footer3: 'Footer3'
+  footer4: 'Footer4'
+  footer_bar_left: 'Footer bar Left'
+  footer_bar_right: 'Footer bar Right'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - iitb_dj/webfonts
+  - iitb_dj/font-awesome
+  - iitb_dj/smartmenus
+  - iitb_dj/iitb_dj-lib
+  - iitb_dj/global-styling

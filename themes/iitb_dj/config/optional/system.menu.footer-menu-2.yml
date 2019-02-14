@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    theme:
+      - iitb_dj
+id: footer-menu-2
+label: Activities
+description: 'Footer column 2 menu'
+locked: false

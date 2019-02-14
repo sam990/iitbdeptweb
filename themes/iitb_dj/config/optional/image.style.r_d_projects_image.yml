@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    theme:
+      - iitb_dj
+name: r_d_projects_image
+label: 'R&D Projects Image'
+effects:
+  id: image_scale_and_crop
+  weight: 1
+  data:
+    width: 400
+    height: 300
