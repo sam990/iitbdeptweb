@@ -5,13 +5,10 @@ dependencies:
     - system
   theme:
     - iitb_dj
-  enforced:
-    theme:
-      - iitb_dj
 id: iitb_dj_branding
 theme: iitb_dj
 region: header
-weight: -11
+weight: 0
 provider: null
 plugin: system_branding_block
 settings:

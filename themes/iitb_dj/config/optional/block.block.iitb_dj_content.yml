@@ -5,18 +5,15 @@ dependencies:
     - system
   theme:
     - iitb_dj
-  enforced:
-    theme:
-      - iitb_dj
-id: iitb_dj_breadcrumbs
+id: iitb_dj_content
 theme: iitb_dj
-region: breadcrumb
-weight: -9
+region: content
+weight: 0
 provider: null
-plugin: system_breadcrumb_block
+plugin: system_main_block
 settings:
-  id: system_breadcrumb_block
-  label: Breadcrumbs
+  id: system_main_block
+  label: 'Main page content'
   provider: system
   label_display: '0'
 visibility: {  }

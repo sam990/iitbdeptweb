@@ -1,10 +1,9 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    theme:
-      - iitb_dj
+  theme:
+    - iitb_dj
 id: footer-menu-2
-label: Activities
+label: Footer-menu-2
 description: 'Footer column 2 menu'
 locked: false

@@ -7,10 +7,7 @@ dependencies:
     - system
   theme:
     - iitb_dj
-  enforced:
-    theme:
-      - iitb_dj
-id: iitb_dj_main_navigation
+id: iitb_dj_main_menu
 theme: iitb_dj
 region: navigation_collapsible
 weight: 0
@@ -22,5 +19,5 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 0
+  depth: 1
 visibility: {  }

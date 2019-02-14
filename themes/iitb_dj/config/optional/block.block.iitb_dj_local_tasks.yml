@@ -3,13 +3,10 @@ status: true
 dependencies:
   theme:
     - iitb_dj
-  enforced:
-    theme:
-      - iitb_dj
-id: iitb_dj_tabs
+id: iitb_dj_local_tasks
 theme: iitb_dj
 region: content_top
-weight: -5
+weight: -40
 provider: null
 plugin: local_tasks_block
 settings:

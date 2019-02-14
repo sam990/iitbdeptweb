@@ -1,17 +1,14 @@
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
     - iitb_dj
-  enforced:
-    theme:
-      - iitb_dj
-id: iitb_dj_poweredbydrupal
+id: iitb_dj_powered
 theme: iitb_dj
 region: footer_bar_left
-weight: 0
+weight: 10
 provider: null
 plugin: system_powered_by_block
 settings:

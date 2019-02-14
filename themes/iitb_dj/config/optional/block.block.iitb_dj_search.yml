@@ -5,18 +5,15 @@ dependencies:
     - search
   theme:
     - iitb_dj
-  enforced:
-    theme:
-      - iitb_dj
-id: iitb_dj_searchform
+id: iitb_dj_search
 theme: iitb_dj
 region: header_search
-weight: -11
+weight: -1
 provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
-  label: 'Search form'
+  label: Search
   provider: search
-  label_display: '0'
+  label_display: visible
 visibility: {  }

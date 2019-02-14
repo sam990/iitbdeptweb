@@ -7,9 +7,6 @@ dependencies:
     - system
   theme:
     - iitb_dj
-  enforced:
-    theme:
-      - iitb_dj
 id: iitb_dj_footermenu2
 theme: iitb_dj
 region: footer3
@@ -18,7 +15,7 @@ provider: null
 plugin: 'system_menu_block:footer-menu-2'
 settings:
   id: 'system_menu_block:footer-menu-2'
-  label: Activities
+  label: Footer menu 2
   provider: system
   label_display: visible
   level: 1

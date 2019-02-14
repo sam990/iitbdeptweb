@@ -1,10 +1,9 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    theme:
-      - iitb_dj
+  theme:
+    - iitb_dj
 id: footer-menu-1
-label: Services
+label: Footer-menu-1
 description: 'Footer column 1 menu'
 locked: false

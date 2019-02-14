@@ -1,10 +1,9 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    theme:
-      - iitb_dj
+  theme:
+    - iitb_dj
 id: footer-menu-3
-label: Resources
+label: Footer-menu-3
 description: 'Footer column 3 menu'
 locked: false

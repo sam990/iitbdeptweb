@@ -21,7 +21,7 @@ favicon:
   use_default: 1
 schemas:
   bootstrap: 8000
-  acadmix: 8000
+  iibt_dj: 8000
 features:
   comment_user_picture: 1
   comment_user_verification: 1
