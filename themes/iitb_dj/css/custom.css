@@ -112,42 +112,17 @@
           transform: translateY(-100%);
 }
 
-.navbar-is-shrink{
- -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-    transition: 0.5s;
-}
+
 
 
 @media screen and (max-width: 767px){
-  .navbar-is-shrink{
-   -webkit-transform: translateY(-30%);
-    -ms-transform: translateY(-30%);
-        transform: translateY(-30%);
-  }
 
   .region-navigation-collapsible{
     display: none;
   }
 }
 
-@media screen and (min-width: 767px){
-  .navbar-is-shrink .nav-wrap-hidden
-  {
-    display: none;
-    -webkit-transition: 0.5s;
-     -moz-transition: 0.5s;
-     -o-transition: 0.5s;
-    transition: 0.5s;
-  }
-  .navbar-is-shrink .navbar-header{
-    max-height: 46px;
-  }
-}
+
 
 .hidden{
   display: none;
@@ -157,45 +132,9 @@
   transition: all 0.5s;*/
 }
 
-.navbar-is-shrink .font-shrink{
-  font-size: 0.67rem;
-/*  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;*/
-}
-
-.font-shrink .navbar-text{
-  margin-top: 0.5em;
-/*  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;*/
-}
-
-.font-shrink .navbar-brand{
-  padding-top: 0.7em;
-  font-size: 1.1rem;
-  font-weight: normal;
-/*  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-    transition: all 0.5s;*/
-}
 
 
-@media screen and (max-width: 767px){
-.font-shrink .navbar-brand {
-    padding-top: 0.3em;
-  }
-}
 
-#font-shrink{
-   -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-    transition: 0.5s;
-}
 
 .navbar-brand {
   height: auto;
@@ -203,10 +142,10 @@
   font-size: 2rem;
   font-weight: bold;
   font-family: 'Oswald', 'Lucida Sans Unicode','Lucida Grande',sans-serif;
- /* -webkit-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
-transition: all 0.5s;*/
+transition: all 0.5s;
 }
 
 @media screen and (max-width: 767px){

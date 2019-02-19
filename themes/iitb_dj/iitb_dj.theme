@@ -257,7 +257,7 @@ function iitb_dj_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\Form
         '#maxlength' => 120,
     );
 
-    $form['_settings']['news_header_bg']['news_header_bg'] = array(
+    $form['iitb_dj_settings']['news_header_bg']['news_header_bg'] = array(
       '#type' => 'file',
       '#title' => t('Upload news page header background image'),
       '#size' => 40,
