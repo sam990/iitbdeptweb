@@ -14,9 +14,7 @@ include_once __DIR__ . '/src/Form/IITBDistributionOptionalModulesForm.php';
 function iitbdeptweb_install_tasks_alter(&$tasks, $install_state) {
   // Replace the entire site configuration form provided by Drupal core
   // with a custom callback function defined by this installation profile.
-  //$tasks['install_configure_form']['function'] = 'myprofile_install_configure_form';
-	//echo '<pre>';
-  //print_r($install_state);
+  //$tasks['install_configure_form']['function'] = 'i_i_t_b_distribution_optional_modules_form';
   //$tasks=array();
   $tasks['i_i_t_b_distribution_optional_modules_form'] = [
       'display_name' => t('Install IITB Modules'),
@@ -61,12 +59,9 @@ function iitbdeptweb_array_move($which, $where, $array) {
 
 function iitbdeptweb_form_install_configure_form_alter(&$form, $form_state) {
 
-  //echo '<pre>';
-  //print_r($form);
-
   $form['site_information']['site_name']['#default_value'] = t('IITB Academic Distribution');
 
-  $form['site_information']['site_mail']['#default_value'] = t('kumari.ruchi320@gmail.com');
+  $form['site_information']['site_mail']['#default_value'] = t('iitb@iitb.ac.in');
 
   $form['admin_account']['account']['name']['#default_value'] = t('admin');
 
@@ -74,7 +69,7 @@ function iitbdeptweb_form_install_configure_form_alter(&$form, $form_state) {
 
   $form['admin_account']['account']['pass']['pass2']['#default_value'] = t('admin');
 
-  $form['admin_account']['account']['mail']['#default_value'] = t('kumari.ruchi320@gmail.com');
+  $form['admin_account']['account']['mail']['#default_value'] = t('iitb@iitb.ac.in');
 
   $form['regional_settings']['site_default_country']['#default_value'] = 'IN';
 
@@ -82,11 +77,10 @@ function iitbdeptweb_form_install_configure_form_alter(&$form, $form_state) {
 }
 
 function iitbdeptweb_form_install_settings_form_alter(&$form, $form_state) {
-  //echo '<pre>';
-  //print_r($form);
+
   $form['settings']['mysql']['database']['#default_value'] = 'iitbdeptweb';
 
-  $form['settings']['mysql']['username']['#default_value'] = 'root';
+  $form['settings']['mysql']['username']['#default_value'] = 'admin';
 
-  $form['settings']['mysql']['password']['#default_value'] = '123';
+  $form['settings']['mysql']['password']['#default_value'] = '';
 }
