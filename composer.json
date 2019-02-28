@@ -1,6 +1,6 @@
 {
     "name": "iitbombayweb/iitbdeptweb",
-    "description": "IIT Bombay Department Website Distribution Profile 7.0",
+    "description": "IIT Bombay Department Website Distribution Profile 6.6.1",
     "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
     "minimum-stability": "dev",
