@@ -38,7 +38,7 @@ function iitbdeptweb_install() {
 
   \Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'acadmix')
+    ->set('default', 'iitb_dj')
     ->save();
 
   // Creating users with this role.
