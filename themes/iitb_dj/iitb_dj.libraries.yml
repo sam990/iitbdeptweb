@@ -37,7 +37,7 @@ font-awesome:
   css:
     theme:
       includes/font-awesome/css/all.min.css: {}
-
+      includes/font-awesome/css/v4-shims.min.css: {}
 webfonts:
   version: VERSION
   css:
