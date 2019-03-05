@@ -1590,6 +1590,10 @@ ul.list-unstyled.lst_news_list {
   margin-top: 16px; 
 }
 
+.lst_news_item span p{
+  display: inline;
+}
+
 .lst_news_list h3.title {
   margin-top: 13px;
   margin-bottom: 4px;
@@ -2344,6 +2348,7 @@ ul.page-numbers {
       bottom: 0;
       left: 0;
       width: 100%;
+      min-height: 353px;
   }
 }
   .section-footer .footer-site-info{

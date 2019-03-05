@@ -18,7 +18,7 @@ global-styling:
       css/colors.css: {}
   js:
     js/custom.js: {}
-    js/SmoothScroll.min.js: {}
+    js/scroll.js: {}
   dependencies:
     - core/jquery
 

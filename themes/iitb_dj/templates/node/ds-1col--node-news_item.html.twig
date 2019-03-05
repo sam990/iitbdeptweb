@@ -35,7 +35,7 @@
                                 </figcaption>
                             </figure>
                         </a> -->
-                        {{ ds_content.field_news_images }}
+                        
                         <div class="events-item-meta">
 
                          {#    
@@ -46,9 +46,14 @@
                                 <span class="text">{{ ds_content.field_event_venue }}</span>
                             </div>]
                          #}
-                            {{ ds_content.field_news_type }}
-                            {{ ds_content.field_news_date }}
-                            {{ ds_content.body }}
+                           {#  
+                                {{ ds_content.field_news_images }}
+                                {{ ds_content.field_news_type }}
+                                {{ ds_content.field_news_date }}
+                                {{ ds_content.body }} 
+                            #}
+
+                            {{ ds_content|without('title', 'field_news_images') }}
                         </div>
                       </article><!-- /.sabbi-events-item -->
                 </div>
