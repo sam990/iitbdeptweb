@@ -655,7 +655,7 @@ body .mb-100 {
 
 /* sabbi-thumlinepost-card */
 .sabbi-thumlinepost-card {
-  min-height: 372px;
+  /*min-height: 372px;*/
   overflow: hidden;
   border-radius: 4px; }
   .sabbi-thumlinepost-card .entry-title {
@@ -1563,7 +1563,6 @@ a.link-with-icon i.fa {
 
 /* home news */
 .news-card {
-  min-height: 372px;
   padding: 30px 25px;
    }
   
