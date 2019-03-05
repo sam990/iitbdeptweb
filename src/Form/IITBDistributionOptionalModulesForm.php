@@ -27,14 +27,13 @@ class IITBDistributionOptionalModulesForm extends FormBase {
       '#title' => $this->t('test2'),
       '#weight' => '0',
     ];*/
-    $form['#title']="IITB Features";
+    $form['#title']="IITB Distribution Features";
 
     $form['select_modules'] = [
       '#type' => 'checkboxes',
       '#title' => $this->t('Select Features'),
       '#description' => $this->t('Select Optional Features To Install'),
-      '#options' =>  ['acadmix_faculty' => $this->t('Acadmix Faculty'),
-        'acadmix_event' => $this->t('Acadmix Event'), 'acadmix_news' => $this->t('Acadmix News')],
+      '#options' =>  ['course_allotment' => $this->t('Course Allotment'), 'course_details' => $this->t('Course Details'), 'laboratory_facility' => $this->t('Laboratory Facility'), 'research_glimpses' => $this->t('Research Glimpses'), 'staff_page' => $this->t('Staff Page'), 'student_page' => $this->t('Student Page'), 'ta_topic_choice' => $this->t('TA Topic Choice'), 'acadmix_faculty' => $this->t('Acadmix Faculty'), 'acadmix_event' => $this->t('Acadmix Event'), 'acadmix_news' => $this->t('Acadmix News')],
       '#default_value' => Array(),
       '#weight' => '0',
     ];
