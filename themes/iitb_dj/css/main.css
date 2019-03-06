@@ -655,7 +655,7 @@ body .mb-100 {
 
 /* sabbi-thumlinepost-card */
 .sabbi-thumlinepost-card {
-  min-height: 372px;
+  /*min-height: 372px;*/
   overflow: hidden;
   border-radius: 4px; }
   .sabbi-thumlinepost-card .entry-title {
@@ -1563,7 +1563,6 @@ a.link-with-icon i.fa {
 
 /* home news */
 .news-card {
-  min-height: 372px;
   padding: 30px 25px;
    }
   
@@ -1589,6 +1588,10 @@ ul.list-unstyled.lst_news_list {
 }
 .lst_news_list .lst_news_item {
   margin-top: 16px; 
+}
+
+.lst_news_item span p{
+  display: inline;
 }
 
 .lst_news_list h3.title {
@@ -2345,6 +2348,7 @@ ul.page-numbers {
       bottom: 0;
       left: 0;
       width: 100%;
+      min-height: 353px;
   }
 }
   .section-footer .footer-site-info{
