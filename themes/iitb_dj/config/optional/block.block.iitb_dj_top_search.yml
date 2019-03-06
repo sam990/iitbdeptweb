@@ -6,7 +6,7 @@ dependencies:
   theme:
     - iitb_dj
 id: iitb_dj_top_search
-theme: acadmix
+theme: iitb_dj
 region: top_head_search
 weight: -13
 provider: null
