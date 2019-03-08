@@ -2,7 +2,7 @@ name: iitbdeptweb
 core: 8.x
 type: profile
 description: 'IIT Bombay Depatment Website Distribution'
-version: '8.1.0'
+version: '8.6.x'
 
 distribution:
   name: 'IIT Bombay Depatment Website Distribution'
@@ -43,6 +43,7 @@ dependencies:
   - views_ui
   - tour
   - automated_cron
+  - responsive_image
  #contrib
   - config_sync
   - config_merge_filter
