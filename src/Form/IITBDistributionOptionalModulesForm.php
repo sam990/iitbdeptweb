@@ -56,7 +56,7 @@ class IITBDistributionOptionalModulesForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    Display result.
+    //Display result.
     foreach ($form_state->getValues() as $key => $value) {
       if($key=='select_modules') {
         foreach ($value as $key1 => $value1) {
@@ -69,6 +69,8 @@ class IITBDistributionOptionalModulesForm extends FormBase {
       }
       //drupal_set_message($key . ': ' . print_R($value));
     }
+
+  }
 
  //    $batch = array(
  //      'title' => t('Verifying Emails...'),
