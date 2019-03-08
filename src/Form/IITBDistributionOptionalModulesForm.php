@@ -57,19 +57,47 @@ class IITBDistributionOptionalModulesForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Display result.
+    // foreach ($form_state->getValues() as $key => $value) {
+    //   if($key=='select_modules') {
+    //     foreach ($value as $key1 => $value1) {
+    //       //drupal_set_message($key1 . ': ' . $value1);
+    //       if($value1!='0') {
+    //         //If checked only then enable module
+    //         \Drupal::service('module_installer')->install(array($value1));
+    //       }
+    //     }
+    //   }
+    //   //drupal_set_message($key . ': ' . print_R($value));
+    // }
+
+    $batch = array(
+      'title' => t('Verifying Emails...'),
+      'operations' => [],
+      'init_message'     => t('Commencing'),
+      'progress_message' => t('Processed @current out of @total.'),
+      'error_message'    => t('An error occurred during processing'),
+      // 'finished' => '\Drupal\batch_example\DeleteNode::ExampleFinishedCallback',
+    );
+    // Display result.
     foreach ($form_state->getValues() as $key => $value) {
       if($key=='select_modules') {
         foreach ($value as $key1 => $value1) {
           //drupal_set_message($key1 . ': ' . $value1);
           if($value1!='0') {
             //If checked only then enable module
-            \Drupal::service('module_installer')->install(array($value1));
-          }
+      			$batch['operations'][] = ['\Drupal\iitbdeptweb\Form\IITBDistributionOptionalModulesForm::enableiitbmodules',[$value1]];
+    			}
         }
       }
       //drupal_set_message($key . ': ' . print_R($value));
     }
 
+    batch_set($batch);
+
   }
+
+  public function enableiitbmodules($module_name) {
+  	\Drupal::service('module_installer')->install(array($module_name));
+	}
 
 }
