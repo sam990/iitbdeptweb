@@ -75,6 +75,17 @@ dependencies:
   - ldap_query
   - authorization_drupal_roles
   - views_bootstrap
+ #custom
+  - acadmix_event
+  - acadmix_faculty
+  - acadmix_news
+  - acadmix_slider
+  - course_allotment
+  - course_details
+  - laboratory_facility
+  - research_glimpses
+  - staff_page
+  - student_page
 themes:
   - bartik
   - seven
