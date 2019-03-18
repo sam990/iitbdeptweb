@@ -70,6 +70,7 @@ dependencies:
   - ds
   - spamspan
   - libraries
+  - ldap_servers
   - ldap_authentication
   - ldap_authorization
   - ldap_help
