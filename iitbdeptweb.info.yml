@@ -43,7 +43,6 @@ dependencies:
   - views_ui
   - tour
   - automated_cron
-  - responsive_image
  #contrib
   - config_sync
   - config_merge_filter
