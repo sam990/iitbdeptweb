@@ -105,8 +105,8 @@ function iitb_dj_preprocess_block(&$variables) {
       $variables['logo2'] = $base_path.'/' . drupal_get_path('theme','iitb_dj') . '/logo2.png';
       break;
 
+    }
   }
-}
 
 
 /**
@@ -265,7 +265,7 @@ function iitb_dj_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\Form
       '#description' => t('If you don\'t have direct access to the server, use this field to upload your header background image. Uploads limited to .png .gif .jpg .jpeg .apng .svg extensions'),
       '#element_validate' => array('news_header_bg_validate'),
     );
-  }
+}
 
 function faculty_header_bg_validate($element, FormStateInterface $form_state) {
   global $base_url;
