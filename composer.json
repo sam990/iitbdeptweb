@@ -32,7 +32,12 @@
       "drupal/spamspan": "~1.0",
       "drupal/views_bootstrap": "~4.1",
       "drupal/linked_field": "~1.1",
+<<<<<<< HEAD
       "drupal/twig_field_value": "1.2",
+=======
+      "drupal/twig_field_value": "~1.2",
+      "drupal/field_group": "~3.0",
+>>>>>>> d15771619c5c797944b5f1d71147024d725b407f
       "drupal/config_sync": "~2.0",
       "drupal/config_merge_filter": "~1.0",
       "drupal/config_distro_ignore": "~1.0",
