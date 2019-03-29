@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
     - system
   theme:
     - iitb_dj
@@ -23,12 +22,3 @@ visibility:
     pages: "<front>\r\n/event/*\r\n/news/*\r\n/faculty/*"
     negate: true
     context_mapping: {  }
-  node_type:
-    id: node_type
-    bundles:
-      event: event
-      fac_page: fac_page
-      news_item: news_item
-    negate: true
-    context_mapping:
-      node: '@node.node_route_context:node'
