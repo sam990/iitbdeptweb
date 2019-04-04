@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Display Suite 1 column template.
+ *
+ * Available variables:
+ * - ds_content_wrapper: wrapper around content
+ * - attributes: content region attributes
+ * - ds_content: content region
+ */
+#}
+<{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix') }}>
+
+  {{ title_suffix.contextual_links }}
+<div class="col-sm-4">
+	{{ ds_content.field_staff_photo	}}
+</div>
+<div class="col-sm-8">
+	{{ ds_content|without('field_staff_photo') }}
+</div>
+
+</{{ ds_content_wrapper }}>
