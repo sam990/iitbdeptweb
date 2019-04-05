@@ -1582,6 +1582,10 @@ a.link-with-icon i.fa {
     color: #666666;
     font-style: italic; 
   }
+.news-card .date:before {
+    margin-right: 5px;
+}
+
 ul.list-unstyled.lst_news_list {
     margin: 0;
     padding: 0;
@@ -1599,6 +1603,8 @@ ul.list-unstyled.lst_news_list {
   margin-bottom: 4px;
   font-size: 0.9rem; 
 }
+
+
 
 /* brand_quickfact-wrap */
 /* brand_quickfact */
