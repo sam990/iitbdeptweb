@@ -11,19 +11,17 @@ include_once __DIR__ . '/src/Form/IITBDistributionOptionalModulesForm.php';
 
 // Add any custom code here like hook implementations.
 //function iitbdeptweb_form_install_configure_form_alter(&$form, FormStateInterface $form_state)
-function iitbdeptweb_install_tasks_alter(&$tasks, $install_state) {
-  // Replace the entire site configuration form provided by Drupal core
-  // with a custom callback function defined by this installation profile.
-  //$tasks['install_configure_form']['function'] = 'i_i_t_b_distribution_optional_modules_form';
-  //$tasks=array();
-  $tasks['i_i_t_b_distribution_optional_modules_form'] = [
-      'display_name' => t('Install IITB Modules'),
-      'type' => 'form',
-      'function' => 'Drupal\iitbdeptweb\Form\IITBDistributionOptionalModulesForm',
-    ];
-  $tasks = iitbdeptweb_array_move('i_i_t_b_distribution_optional_modules_form',11,$tasks);
-  return $tasks;
-}
+// function iitbdeptweb_install_tasks_alter(&$tasks, $install_state) {
+//   // Replace the entire site configuration form provided by Drupal core
+//   // with a custom callback function defined by this installation profile.
+//   $tasks['i_i_t_b_distribution_optional_modules_form'] = [
+//       'display_name' => t('Install IITB Modules'),
+//       'type' => 'form',
+//       'function' => 'Drupal\iitbdeptweb\Form\IITBDistributionOptionalModulesForm',
+//     ];
+//   $tasks = iitbdeptweb_array_move('i_i_t_b_distribution_optional_modules_form',11,$tasks);
+//   return $tasks;
+// }
 
 function iitbdeptweb_array_splice_assoc(&$input, $offset, $length, $replacement) {
         $replacement = (array) $replacement;
