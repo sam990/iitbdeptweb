@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.dept_staff
+  module:
+    - system
+    - views
+  theme:
+    - iitb_dj
+id: exposedformdept_staffpage_1
+theme: che_iitb_dj
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:dept_staff-page_1'
+settings:
+  id: 'views_exposed_filter_block:dept_staff-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /staff-directory
+    negate: false
+    context_mapping: {  }
