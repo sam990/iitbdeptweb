@@ -44,7 +44,8 @@
     "drupal/config_distro_ignore": "~1.0",
     "drupal/config_update_ui": "~1.6",
     "bower-asset/slick-carousel": "~1.0",
-    "npm-asset/blazy": "~1.0"
+    "npm-asset/blazy": "~1.0",
+    "npm-asset/datatables": "1.9.4"
   },
   "repositories": {
     "drupal": {
