@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: iitbmigration
-label: IITB Migtaion
+label: IITB Migration
 description: 'IITB data migrations for department distribution.'
 source_type: 'CSV files'
 module: null
