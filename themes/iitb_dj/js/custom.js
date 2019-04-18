@@ -56,7 +56,8 @@
   	    } 
         else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
   	    	//if scrolling down...
-          if ( $(window).width() > 767 )
+          if ( $(window).width() > 767 ){
+
             mainHeader.addClass('is-hidden');
             $(".top-nav").removeClass('top-nav-hidden').addClass('top-nav-fixed');
           }
