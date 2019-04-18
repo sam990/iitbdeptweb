@@ -150,26 +150,7 @@
                 <a class="top-head-def-brand "href="{{ heading_branding_url }}" target="_blank" title="{{ heading_branding_title }}" >{{ heading_branding_text }}</a>
               </div>
 
-              <div class="col-sm-4 text-right">
-                {% if show_social_icon %}
-                  <p class="social-media">
-                    {% if facebook_url %}
-                      <a href="{{ facebook_url }}"  class="facebook" target="_blank"  title="{{ 'Facebook'|t }}" ><i class="fab fa-facebook-f"></i></a>
-                    {% endif %}
-                    {% if google_plus_url %}
-                      <a href="{{ google_plus_url }}"  class="google-plus" target="_blank"  title="{{ 'Google plus'|t }}" ><i class="fab fa-google-plus-g"></i></a>
-                    {% endif %}
-                    {% if twitter_url %}
-                      <a href="{{ twitter_url }}" class="twitter" target="_blank"  title="{{ 'Twitter'|t }}"><i class="fab fa-twitter"></i></a>
-                    {% endif %}
-                    {% if linkedin_url %}
-                      <a href="{{ linkedin_url }}" class="linkedin" target="_blank"  title="{{ 'Linked In'|t }}"><i class="fab fa-linkedin-in"></i></a>
-                    {% endif %}
-                  </p>                                
-                {% endif %}  
-              </div>
-
-              <div class="col-sm-2 text-right">
+              <div class="col-sm-6 text-right">
                 {% if page.lang_switcher %}
                   {{ page.lang_switcher }}
                 {% endif %}
@@ -519,7 +500,7 @@
                 
                 {% if page.footer_bar_left %}
                   {% if page.footer_bar_left and page.footer_bar_right %}
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                   {% else %}
                     <div class="col-md-12">
                   {% endif %}
@@ -529,9 +510,10 @@
                   </div>
                 {% endif %}
                   
+
                 {% if page.footer_bar_right %}
                   {% if page.footer_bar_left and page.footer_bar_right %}
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                   {% else %}
                     <div class="col-md-12">
                   {% endif %}
@@ -540,6 +522,27 @@
                       </div>
                     </div>
                 {% endif %}
+
+
+              <div class="col-md-4 text-right">
+                {% if show_social_icon %}
+                  <p class="social-media">
+                    {% if facebook_url %}
+                      <a href="{{ facebook_url }}"  class="facebook" target="_blank"  title="{{ 'Facebook'|t }}" ><i class="fab fa-facebook-f"></i></a>
+                    {% endif %}
+                    {% if google_plus_url %}
+                      <a href="{{ google_plus_url }}"  class="google-plus" target="_blank"  title="{{ 'Google plus'|t }}" ><i class="fab fa-google-plus-g"></i></a>
+                    {% endif %}
+                    {% if twitter_url %}
+                      <a href="{{ twitter_url }}" class="twitter" target="_blank"  title="{{ 'Twitter'|t }}"><i class="fab fa-twitter"></i></a>
+                    {% endif %}
+                    {% if linkedin_url %}
+                      <a href="{{ linkedin_url }}" class="linkedin" target="_blank"  title="{{ 'Linked In'|t }}"><i class="fab fa-linkedin-in"></i></a>
+                    {% endif %}
+                  </p>                                
+                {% endif %}  
+              </div>
+
             </div>
           {% endif %}
 
