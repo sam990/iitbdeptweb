@@ -1322,8 +1322,8 @@ h1.academix-logo {
     content: '';
     position: absolute;
     width: 8px;
-    height: 94%;
-    margin-top: -7px;
+    height: 90%;
+    /*margin-top: -7px;*/
     top: 5px;
     left: 133px;
     border-radius: 2px;
