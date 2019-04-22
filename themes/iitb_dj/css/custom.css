@@ -1030,6 +1030,11 @@ body.toolbar-fixed .top-nav-fixed{
     font-size: 0.95em;
     text-align: center;
   }
+
+  .footer-bottom .social-media{
+  text-align: left;
+  }
+
 }
 
 
