@@ -483,30 +483,30 @@ left: 100%;
 
 @media screen and (max-width: 600px){
   #slick-views-main-slider-block-1-1-slider .slide__caption{
-    top: 60%;
+    top: 45%;
     font-size: 0.75rem;
   }
 
   #slick-views-main-slider-block-1-1-slider .slide__title{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 450px){
   #slick-views-main-slider-block-1-1-slider .slide__caption{
-    top: 50%;
-    font-size: 0.7rem;
+    top: 30%;
+    width: 70%;
+    font-size: 0.65rem;
   }
 
   #slick-views-main-slider-block-1-1-slider .slide__title{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .slick-arrow{
     height: 30px;
     width: 30px;
   }
-
 }
 @media (min-width: 64em){
   .slide__caption {
@@ -940,9 +940,9 @@ body.toolbar-fixed .top-nav-fixed{
 /* media queries */
 
 @media screen and (max-width: 1200px){
-  .region-content{
+/*  .region-content{
     font-size: 14px;
-  }
+  }*/
   .node-field-label{
     font-size: 16px;
   }
@@ -953,15 +953,13 @@ body.toolbar-fixed .top-nav-fixed{
 /*  .sec-logo {
     max-width: 5em;
   }*/
-  .region-content{
+/*  .region-content{
     font-size: 14px;
-  }
+  }*/
 }
 
 @media screen and (max-width: 992px){
-  .region-content{
-    font-size: 13px;
-  }
+
   .node-field-label{
     font-size: 14px;
   }
@@ -995,9 +993,6 @@ body.toolbar-fixed .top-nav-fixed{
  /* .navbar-brand {
     max-width: 11em;
   }*/
-  .region-content{
-      font-size: 13px;
-  }
 }
 
 @media screen and (max-width:767px){
@@ -1078,9 +1073,6 @@ body.toolbar-fixed .top-nav-fixed{
     width: 5em;
   }
 
-  .region-content{
-    font-size: 12px;
-  }
   .top-head p {
     font-size: 10pt;
   }
