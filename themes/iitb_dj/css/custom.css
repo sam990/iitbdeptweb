@@ -675,6 +675,15 @@ ul.shs li:last-of-type{
   display: none;
 }
 
+.file>span {
+    border: none!important;
+    background: transparent!important;
+}
+
+.fac-info-link{
+  white-space: normal;
+}
+
 
 
 
@@ -935,6 +944,13 @@ body.toolbar-fixed .top-nav-fixed{
 .footer-bottom .contextual-region .contextual .contextual-links{
   top: -71px;
 }
+
+
+/* view-chemical-engineering-laboratories*/
+.view-chemical-engineering-laboratories .views-field-field-facultynode ul{
+  list-style-type: none;
+}
+
 
 
 /* media queries */
