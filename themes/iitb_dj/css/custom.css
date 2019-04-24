@@ -946,6 +946,13 @@ body.toolbar-fixed .top-nav-fixed{
 }
 
 
+/* view-chemical-engineering-laboratories*/
+.view-chemical-engineering-laboratories .views-field-field-facultynode ul{
+  list-style-type: none;
+}
+
+
+
 /* media queries */
 
 @media screen and (max-width: 1200px){
