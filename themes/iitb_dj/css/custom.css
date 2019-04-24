@@ -675,6 +675,11 @@ ul.shs li:last-of-type{
   display: none;
 }
 
+.file>span {
+    border: none!important;
+    background: transparent!important;
+}
+
 .fac-info-link{
   white-space: normal;
 }
