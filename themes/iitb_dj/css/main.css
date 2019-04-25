@@ -1315,14 +1315,15 @@ h1.academix-logo {
 
 .ol-timeline {
   list-style: none;
-  margin-top: 120px;
+  margin-top: 4f0px;
   padding-left: 157px;
-  position: relative; }
+  position: relative; 
+}
   .ol-timeline:before {
     content: '';
     position: absolute;
     width: 8px;
-    height: 90%;
+    height: 100%;
     /*margin-top: -7px;*/
     top: 5px;
     left: 133px;
@@ -1330,10 +1331,13 @@ h1.academix-logo {
     background-color: #f5f3f4;
     transition: all .3s ease;
     border: 1px solid transparent;
-    transform: scaleY(1.5); }
+    transform: scaleY(1.1); 
+  }
+  
   .ol-timeline li.tl-item {
     position: relative;
-    margin-bottom: 45px; }
+    margin-bottom: 15px; 
+  }
     .ol-timeline li.tl-item:first-child .item-section:after {
       background-color: #6fc75b; }
     .ol-timeline li.tl-item:first-child .title {
@@ -2125,7 +2129,7 @@ ul.list-unstyled.lst_news_list {
   margin-bottom: 15px; }
 
 .appoint-timeline-holder {
-  margin-top: 5em;
+  margin-top: 2em;
 }
 
 /* .sabbi-page-header {
