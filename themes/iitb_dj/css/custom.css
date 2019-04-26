@@ -125,11 +125,11 @@
 
 
 .hidden{
-  display: none;
-/*  -webkit-transition: all 0.5s;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
    -moz-transition: all 0.5s;
    -o-transition: all 0.5s;
-  transition: all 0.5s;*/
+  transition: all 0.5s;
 }
 
 
@@ -899,6 +899,15 @@ body.toolbar-fixed .top-nav-fixed{
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);
     }
+
+
+
+  .is-hidden-nav{
+     -webkit-transform: translateY(10%);
+      -ms-transform: translateY(10%);
+          transform: translateY(10%);
+    }
+
  
   .navbar-text {
     width: 10em;
@@ -1056,6 +1065,13 @@ body.toolbar-fixed .top-nav-fixed{
 @media screen and (max-width: 600px){
   .navbar-text {
     display: none;
+  }
+
+  #nav-wrap{
+      -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
 }
 
