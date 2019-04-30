@@ -1094,7 +1094,7 @@ body.toolbar-fixed .top-nav-fixed{
 @media screen and (max-width: 450px) {
   .navbar-brand {
     max-width: 9em;
-    padding: 8px;
+    padding: 10px;
     margin-left: 0px;
     font-size: 1rem;
     line-height: 1.5;
