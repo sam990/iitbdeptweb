@@ -35,6 +35,7 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
+  - iitb_dj/bootstrap
   - iitb_dj/webfonts
   - iitb_dj/font-awesome
   - iitb_dj/smartmenus
