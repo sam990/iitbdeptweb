@@ -2,7 +2,7 @@ name: iitbdeptweb
 core: 8.x
 type: profile
 description: 'IIT Bombay Depatment Website Distribution'
-version: '8.6.x'
+version: '8.7.x'
 
 distribution:
   name: 'IIT Bombay Depatment Website Distribution'
