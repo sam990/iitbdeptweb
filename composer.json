@@ -16,7 +16,7 @@
     "drupal/migrate_tools": "~4.0",
     "drupal/migrate_plus": "~5.1",
     "drupal/migrate_source_csv": "~3.4",
-    "drupal/migrate_file": "~1.1",
+    "drupal/migrate_file": "~2.0",
     "drupal/slick": "~2.2",
     "drupal/slick_views": "~2.3",
     "drupal/slick_extras": "~1.0",
