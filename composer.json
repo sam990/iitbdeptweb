@@ -12,7 +12,7 @@
     "drupal/search_api_solr": "~4.1",
     "drupal/search_api_autocomplete": "~1.0",
     "drupal/facets": "~1.0",
-    "drupal/devel": "~1.0",
+    "drupal/devel": "~4.1",
     "drupal/migrate_tools": "~4.0",
     "drupal/migrate_plus": "~5.1",
     "drupal/migrate_source_csv": "~3.4",
