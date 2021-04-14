@@ -1,4 +1,6 @@
+# Core: Below to be removed later, Once 9.x test is successful.
 core: 8.x
+core_version_requirement: ^8 || ^9
 type: theme
 base theme: bootstrap
 
