@@ -1,8 +1,10 @@
 name: iitbdeptweb
+# Core: Below to be removed later, Once 9.x test is successful.
 core: 8.x
+core_version_requirement: ^8 || ^9
 type: profile
 description: 'IIT Bombay Department Website Distribution'
-version: '8.8.x'
+version: '9.1.x'
 
 distribution:
   name: 'IIT Bombay Depatment Website Distribution'
