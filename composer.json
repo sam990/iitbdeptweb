@@ -57,7 +57,6 @@
     "drupal/group": "1.0-rc5",
     "drupal/groupmenu": "~1.0",
     "drupal/masquerade": "~2.0",
-    "drupal/empty_front_page": "1.x-dev",
     "npm-asset/cropper": "~4.1.0"
   },
   "extra": {
