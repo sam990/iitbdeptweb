@@ -73,7 +73,6 @@ dependencies:
   - ldap_servers
   - ldap_authentication
   - ldap_authorization
-  - ldap_help
   - ldap_query
   - authorization_drupal_roles
   - views_bootstrap
