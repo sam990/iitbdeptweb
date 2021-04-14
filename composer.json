@@ -37,7 +37,6 @@
     "drupal/datatables": "~2.0",
     "drupal/bootstrap_layouts": "~5.1",
     "drupal/better_exposed_filters": "~5.0",
-    "drupal/nodeorder": "~1.0",
     "drupal/link_attributes":" ~1.6",
     "drupal/editor_advanced_link": "~1.4",
     "drupal/ckeditor_entity_link": "~1.0",
