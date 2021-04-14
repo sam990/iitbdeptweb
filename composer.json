@@ -22,7 +22,7 @@
     "drupal/slick_extras": "~1.0",
     "drupal/libraries": "~3.0",
     "drupal/ds": "~3.1",
-    "drupal/csv_serialization": "~1.0",
+    "drupal/csv_serialization": "~2.0",
     "drupal/paragraphs": "~1.5",
     "drupal/ldap": "~4.0",
     "drupal/authorization": "~1.0",
