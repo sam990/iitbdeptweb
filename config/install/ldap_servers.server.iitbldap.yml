@@ -13,6 +13,7 @@ weight: null
 bind_method: anon_user
 binddn: null
 bindpw: null
+encryption: none
 basedn: 'dc=iitb,dc=ac,dc=in'
 user_attr: uid
 account_name_attr: ''
