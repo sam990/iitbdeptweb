@@ -1,8 +1,10 @@
 name: iitbdeptweb
+# Core: Below to be removed later, Once 9.x test is successful.
 core: 8.x
+core_version_requirement: ^8 || ^9
 type: profile
 description: 'IIT Bombay Department Website Distribution'
-version: '8.8.x'
+version: '9.2.x'
 
 distribution:
   name: 'IIT Bombay Depatment Website Distribution'
@@ -33,7 +35,7 @@ dependencies:
   - big_pipe
   - taxonomy
   - dblog
-  - search
+#  - search
   - shortcut
   - toolbar
   - field_ui
@@ -53,7 +55,7 @@ dependencies:
   - name
   - token
   - smtp
-  - search_api_solr
+#  - search_api_solr
   - search_api_autocomplete
   - facets
   - coffee
@@ -71,7 +73,6 @@ dependencies:
   - ldap_servers
   - ldap_authentication
   - ldap_authorization
-  - ldap_help
   - ldap_query
   - authorization_drupal_roles
   - views_bootstrap
