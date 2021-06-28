@@ -35,7 +35,7 @@ dependencies:
   - big_pipe
   - taxonomy
   - dblog
-  - search
+#  - search
   - shortcut
   - toolbar
   - field_ui
