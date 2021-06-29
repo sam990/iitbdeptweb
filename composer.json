@@ -57,6 +57,7 @@
     "drupal_git/groupmenu": "~1.0@beta",
     "drupal/masquerade": "~2.0",
     "drupal/config_delete": "~1.17",
+    "drupal/captcha": "~1.2",
     "npm-asset/cropper": "~4.1.0",
     "npm-asset/jquery-ui-touch-punch": "~0.2"
   },

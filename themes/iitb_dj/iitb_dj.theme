@@ -106,9 +106,12 @@ function iitb_dj_preprocess_block(&$variables) {
       if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
         $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
       }
-      $variables['logo2'] = $base_path.'/' . drupal_get_path('theme','iitb_dj') . '/logo2.png';
+      if($base_path != '/') {
+        $variables['logo2'] = $base_path.'/' . drupal_get_path('theme','iitb_dj') . '/logo2.png';
+      } else {
+        $variables['logo2'] = '/' . drupal_get_path('theme','iitb_dj') . '/logo2.png';
+      }
       break;
-
     }
   }
 
