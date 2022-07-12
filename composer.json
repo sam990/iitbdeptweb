@@ -4,6 +4,7 @@
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
   "require": {
+    "drupal/bootstrap":"~3.25",
     "drupal/admin_toolbar": "~3.0",
     "drupal/coffee": "~1.0",
     "drupal/name": "~1.0",
