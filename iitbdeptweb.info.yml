@@ -4,7 +4,7 @@ core: 8.x
 core_version_requirement: ^8 || ^9
 type: profile
 description: 'IIT Bombay Department Website Distribution'
-version: '9.2.x'
+version: '9.3.x'
 
 distribution:
   name: 'IIT Bombay Depatment Website Distribution'
